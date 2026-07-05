@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jewelries — Bijoux d'exception</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
 </head>
 <body>
   <main class="page-shell">
@@ -18,20 +19,7 @@
           <a href="#details" class="button button-secondary">Savoir plus</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="gem-card gemstone-ring">
-          <div class="gemstone">
-            <img src="images/bague_1.jpg" alt="Bague Aura" />
-          </div>
-          <p class="gem-name">Bague Aura</p>
-        </div>
-        <div class="gem-card gemstone-necklace">
-          <div class="gemstone">
-            <img src="images/collier_1.jpg" alt="Collier Lune" />
-          </div>
-          <p class="gem-name">Collier Lune</p>
-        </div>
-      </div>
+      <div class="hero-visual" id="hero-visual"></div>
     </section>
 
     <section id="collection" class="collection">
@@ -41,35 +29,14 @@
         <p>Un design épuré, des matériaux délicats et un rendu lumineux pour un style à la fois moderne et intemporel.</p>
       </div>
 
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="product-visual product-ring">
-            <img src="images/bague_1.jpg" alt="Bague Aura" />
-          </div>
-          <div class="product-copy">
-            <h3>Bague Aura</h3>
-            <p>Anneau fin en or rose, serti d'une pierre centrale translucide. Idéal pour les moments précieux.</p>
-            <span class="price">€128</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-visual product-necklace">
-            <img src="images/collier_1.jpg" alt="Collier Lune" />
-          </div>
-          <div class="product-copy">
-            <h3>Collier Lune</h3>
-            <p>Pendentif délicat en argent poli, parfaitement équilibré pour sublimer un décolleté.</p>
-            <span class="price">€142</span>
-          </div>
-        </article>
-      </div>
+      <div class="product-grid" id="product-grid"></div>
     </section>
 
     <section id="details" class="details">
       <div class="details-box">
         <h2>Un univers créé pour elle</h2>
         <p>Des bijoux conçus pour ceux qui apprécient la beauté discrète. Laissez chaque pièce raconter l'élégance d'un instant.</p>
+        <p class="details-note">Format attendu: <strong>bijou_type_prix_nom.jpg</strong> — exemple: <strong>bijou_bague_128_aura.jpg</strong></p>
       </div>
     </section>
   </main>
