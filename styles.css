@@ -1,0 +1,259 @@
+:root {
+  color-scheme: dark;
+  color: #1b1b1b;
+  background: #f7f3f1;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  --surface: #fff8f3;
+  --surface-soft: #f2ebe7;
+  --text: #1b1b1b;
+  --muted: #6e6158;
+  --accent: #b98b57;
+  --accent-soft: #f4e6d9;
+  --border: rgba(27, 27, 27, 0.08);
+  --shadow: 0 32px 80px rgba(27, 27, 27, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(185, 139, 87, 0.08), transparent 38%),
+              linear-gradient(180deg, #f7f3f1 0%, #f3ede8 100%);
+  color: var(--text);
+}
+
+button, .button {
+  font: inherit;
+}
+
+.page-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+}
+
+.hero-copy {
+  max-width: 540px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(3.2rem, 4vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.hero p {
+  margin: 0 0 2rem;
+  max-width: 42rem;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.button-primary {
+  background: var(--text);
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(27, 27, 27, 0.12);
+}
+
+.button-secondary {
+  border: 1px solid rgba(27, 27, 27, 0.12);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-visual {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.gem-card {
+  width: min(100%, 360px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(245,238,229,0.95));
+  border: 1px solid rgba(27, 27, 27, 0.06);
+  border-radius: 36px;
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.gemstone {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, #fff, #f5e7d9 45%, #e1c7b8 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.6),
+    0 18px 30px rgba(27, 27, 27, 0.08);
+}
+
+.gem-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.collection {
+  margin-top: 6rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.collection-info {
+  max-width: 48rem;
+}
+
+.collection h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
+}
+
+.product-grid {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.product-card {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  box-shadow: 0 20px 45px rgba(27, 27, 27, 0.06);
+}
+
+.product-visual {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 280px;
+  background: linear-gradient(180deg, #fff 0%, #f8f2ec 100%);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-ring .stone,
+.product-necklace .pendant {
+  position: relative;
+}
+
+.product-ring .stone {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, #fff, #dac4ab 40%, #b69875 95%);
+  box-shadow: inset 0 -10px 28px rgba(0,0,0,0.08), 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.product-necklace .pendant {
+  width: 88px;
+  height: 120px;
+  border-radius: 48% 48% 52% 52% / 45% 45% 55% 55%;
+  background: linear-gradient(180deg, #fff 15%, #efe1d3 60%, #d8b89f 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4), 0 16px 30px rgba(27, 27, 27, 0.1);
+}
+
+.product-copy h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.55rem;
+}
+
+.product-copy p {
+  margin: 0 0 1.2rem;
+  color: var(--muted);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.details {
+  margin-top: 5rem;
+  padding: 3rem 2rem;
+  background: var(--accent-soft);
+  border-radius: 32px;
+}
+
+.details-box {
+  max-width: 55rem;
+}
+
+.details h2 {
+  margin: 0 0 1rem;
+  font-size: 2.6rem;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    justify-items: stretch;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
